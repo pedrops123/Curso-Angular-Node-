@@ -1,12 +1,12 @@
 {
-  "name": "execicios_express",
+  "name": "curso_express",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Pedro Furlan",
+  "author": "pedro furlan",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
