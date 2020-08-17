@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app='app' lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Controllers Angular </title>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript">
+        // Exercicio Controllers
+        angular.module('app', [])
+        angular.module('app').controller('MeuController',
+            [
+                //'$scope',
+                function(/*$scope*/) {
+                    // Funcoes da tela
+                    const self = this;
+                    //$scope.value = 10;
+                    self.value = 10;
+                    //$scope.inc = ()=>{ $scope.value++; }
+                    self.inc = ()=>
+                    {
+                        self.value++
+                    }
+                }
+            ]
+        )
+    </script>   
+</head>
+<body>
+    <div ng-controller="MeuController as ctrl">
+        
+        <h1>{{ ctrl.value }}</h1>
+        <input type="number" ng-model="ctrl.value"/>
+        <button ng-click="ctrl.inc()"> incluir </button>
+    </div>
+</body>
+</html>

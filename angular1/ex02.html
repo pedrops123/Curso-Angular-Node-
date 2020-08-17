@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app='app' lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bind Angular </title>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript">
+        angular.module('app', [])
+    </script>
+</head>
+<body>
+    <div>
+        <!-- Le o bind somente uma vez -->
+        {{ ::value }}
+    </div><br/>
+ 
+    <input ng-model="value" type="text"></input>
+
+</body>
+</html>

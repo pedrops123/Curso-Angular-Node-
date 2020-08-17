@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app='app' lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Service Angular </title>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript">
+        angular.module('app', [])
+        angular.module('app').service('utils',function(){
+            this.upper = function (input) {
+                return input.toUpperCase();
+            }
+        })
+
+
+        angular.module('app').controller('MeuController',[
+            'utils',
+            function (utils){
+                const self = this;
+                self.value = utils.upper("texto minusculo")
+            }
+        ])
+    </script>
+</head>
+<body>
+    <div ng-controller="MeuController as controller">
+        <h1>{{ controller.value }}</h1>
+    </div>
+</body>
+</html>
